@@ -4,13 +4,11 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-cirq = "*"
-qutip = "*"
-jupyter = "*"
 numpy = "*"
 pylatexenc = "*"
 qiskit-ibm-runtime = "*"
 qiskit = "*"
+overleaf-sync = "*"
 
 [dev-packages]
 

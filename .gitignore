@@ -7,6 +7,9 @@ cmake-build-debug
 # NECESSARY FOR IBM TOKEN
 .env
 
+# Overleaf login credentials
+.olauth
+
 # Generic OS and IDE stuff...
 .DS_Store
 *MACOSX*

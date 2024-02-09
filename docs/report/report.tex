@@ -1,106 +1,66 @@
-% https://github.com/martinhelso/phduio-article-based
+\documentclass[twocolumn, 10pt]{article}
+%
+% If IEEEtran.cls has not been installed into the LaTeX system files,
+% manually specify the path to it like:
+% \documentclass[journal]{../sty/IEEEtran}
 
-% Add [final] to remove marginal notes:
-%colophon
-\documentclass[final, a4paper, italian, 11pt]{phduio}
 
-\usepackage{phdstyle}   % Custom style
-\usepackage{amsmath}
-\usepackage{mdframed}
+
+
+
+% Some very useful LaTeX packages include:
+% (uncomment the ones you want to load)
+
+\usepackage{xr}
 \usepackage[utf8]{inputenc}
-\usepackage{caption}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{url}
+\usepackage[english]{babel}
+\usepackage{hyperref}
 \usepackage{subcaption}
-\usepackage{wasysym}
-\usepackage{color}
-\usepackage{xcolor,colortbl}
-\usepackage{tabularx}
-\usepackage{array}
-\let\newfloat\undefined
-\usepackage{floatrow}
-\usepackage{empheq}
-\usepackage{xfrac}
-\usepackage[section]{placeins}
-\usepackage[sorting=none]{biblatex}
-\usepackage{wrapfig}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{placeins}
+\usepackage[a4paper, margin={2.5cm, 2.5cm}]{geometry}
 
-\addto\extrasitalian{%
-    \def\subsectionautorefname{paragrafo}%
-    \def\sectionautorefname{paragrafo}%
-}
-
-\makeatletter
-\def\cleardoublepage{\clearpage%
-\if@twoside
-\ifodd\c@page\else
-\vspace*{\fill}
-\hfill
-    \begin{center}
-        Pagina intenzionalmente lasciata vuota.
-    \end{center}
-    \vspace{\fill}
-    \thispagestyle{empty}
-    \newpage
-    \if@twocolumn\hbox{}\newpage\fi
-    \fi
-    \fi
-}
-\makeatother
-\renewcommand{\cleartorecto}{\cleardoublepage}
-
-
-\newcommand*{\rom}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=magenta,
+    urlcolor=cyan
+    }
 \newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
-
-\input{sections/theorems}
-\input{sections/frontespizio}
-
-\newcommand{\mysc}[1]{\textrm{\textsc{#1}}}
-\addbibresource{picRefs.bib}
-\DeclareFieldFormat{doi}{\small{\mysc{DOI:}\\ #1}}
-\DeclareFieldFormat{url}{\small{\mysc{URL:}\\ #1}}
 
 \begin{document}
 
-    \frontmatter        % Folios in Roman numerals, unnumbered chapters.
+\title{TBD}
 
-        \unibotitle
-        \cleartorecto
+\author{
+Matteo Bonacini% <-this % stops a space
+}
+%\markboth{Journal of \LaTeX\ Class Files,~Vol.~14, No.~8, August~2015}
 
-        \include{sections/dedication}
-        \cleartorecto
-        \include{sections/abstract}
 
-        \cleartorecto
-        \tableofcontents    % Or \tableofcontents*
-        \cleartorecto
-        \listoffigures      % Or \listoffigures*
-        \cleartorecto
-        \listoftables       % Or \listoftables*
-        \cleartorecto
+% make the title area
+\maketitle
+% As a general rule, do not put math, special symbols or citations
+% in the abstract or keywords.
+\input{sections/abstract}
+\tableofcontents
+\clearpage
 
-    \mainmatter         % Folios in Arabic numerals, numbered chapters.
+\raggedbottom
 
-            \numberofpapers{6}  % Specify size of thumb indices
-            \cleartorecto
-            \include{sections/1/introduction}
-            \cleartorecto
-            \include{sections/2/chapter2}
-            \cleartorecto
-            \include{sections/3/chapter3}
-            \cleartorecto
-            \include{sections/4/chapter4}
-            \cleartorecto
-            \include{sections/5/chapter5}
-            \cleartorecto
-            \include{sections/6/chapter6}
+\input{sections/1/introduction}
 
-   %     \appendix           % "Chapter" is renamed "Appendix"
-   %     \appendixpage       % Similar to \part*{Appendices}, but appears in TOC
 
-    %        \include{sections/appendixA}
-    \backmatter
-    \cleartorecto
-    \include{sections/conclusioni}
-    \cleartorecto
-    \printbibliography
+
+\newpage
+\bibliographystyle{plain} % We choose the "plain" reference style
+\bibliography{bibliography} % Entries are in the refs.bib file
+
+% that's all folks
 \end{document}
+
+
