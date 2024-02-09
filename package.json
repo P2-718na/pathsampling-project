@@ -1,0 +1,30 @@
+{
+  "name": "dpic",
+  "version": "1.0.0",
+  "description": "tbd",
+  "main": " ",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build:report": "./scripts/build:report.sh",
+    "watch:report": "nodemon -e tex,cls,sty,bib --watch ./docs/report --exec npm run build:report",
+    "build:report-fast": "./scripts/build:report-fast.sh",
+    "watch:report-fast": "nodemon -e tex,cls,sty --watch ./docs/report --exec npm run build:report-fast"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/P2-718na/quantum-folding.git"
+  },
+  "author": "Matteo Bonacini @P2-718na",
+  "license": "AGPLv3",
+  "bugs": {
+    "url": "https://github.com/P2-718na/quantum-folding/issues"
+  },
+  "homepage": "https://github.com/P2-718na/quantum-folding#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  },
+  "dependencies": {
+  }
+}

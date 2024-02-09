@@ -1,0 +1,84 @@
+\colorlet{shadecolor}{lightgray!50}
+\newtheorem{thm-env}{Teorema} % is it right?
+\newtheorem{prop-env}{Proposizione} % is it right?
+
+\theoremstyle{definition}
+\newtheorem{ex-env}{Esempio} % is it right?
+\newtheorem{def-env}{Definizione} % is it right?
+
+\theoremstyle{remark}
+\newtheorem{lemma-env}{Lemma} % is it right?
+\newtheorem{aff-env}{Affermazione} % is it right?
+
+\newenvironment{thm}
+{
+    \begin{shaded}
+    \begin{thm-env}
+}
+{
+    \end{thm-env}
+    \end{shaded}
+}
+
+\newenvironment{prop}
+{
+    \begin{shaded}
+        \begin{prop-env}
+        }
+        {
+        \end{prop-env}
+    \end{shaded}
+}
+
+\newenvironment{lemma}
+{
+    \colorlet{shadecolor}{lightgray!20}
+    \begin{shaded}
+        \begin{lemma-env}
+        }
+        {
+        \end{lemma-env}
+    \end{shaded}
+}
+
+\newenvironment{aff}
+{
+    \colorlet{shadecolor}{lightgray!20}
+    \hfill
+    \begin{minipage}{.86\textwidth}
+        \begin{shaded}
+            \begin{aff-env}
+            }
+            {
+            \end{aff-env}
+        \end{shaded}
+    \end{minipage}
+}
+
+\newenvironment{steps}
+{
+    \begin{enumerate}[label={\emph{Passaggio \arabic*}.}, leftmargin=*]
+    }
+    {
+    \end{enumerate}
+}
+
+\newenvironment{definition}
+{
+    \begin{shaded}
+    \begin{def-env}
+}
+{
+    \end{def-env}
+    \end{shaded}
+}
+
+\newenvironment{example}
+{
+    \begin{framed}
+        \begin{ex-env}
+        }
+        {
+        \end{ex-env}
+    \end{framed}
+}
