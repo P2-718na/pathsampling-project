@@ -8,7 +8,16 @@ numpy = "*"
 pylatexenc = "*"
 qiskit-ibm-runtime = "*"
 qiskit = "*"
-overleaf-sync = "*"
+mdanalysis = "*"
+jupyter = "*"
+nglview = "*"
+dwave-ocean-sdk = "*"
+pandas = "*"
+qiskit-research = {git = "git+https://github.com/qiskit-research/qiskit-research.git"}
+openpathsampling = "*"
+mdtraj = "*"
+jupyter-contrib-nbextensions = "*"
+sqlalchemy = "*"
 
 [dev-packages]
 
