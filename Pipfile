@@ -6,20 +6,18 @@ name = "pypi"
 [packages]
 numpy = "*"
 pylatexenc = "*"
-qiskit-ibm-runtime = "*"
-qiskit = "*"
 mdanalysis = "*"
 jupyter = "*"
 nglview = "*"
-dwave-ocean-sdk = "*"
 pandas = "*"
-qiskit-research = {git = "git+https://github.com/qiskit-research/qiskit-research.git"}
-openpathsampling = "*"
-mdtraj = "*"
 jupyter-contrib-nbextensions = "*"
 sqlalchemy = "*"
+openpathsampling = "*"
 
 [dev-packages]
 
 [requires]
 python_version = "3.9"
+
+[scripts]
+hooks = "conda install -c conda-forge openmm mdtraj openpathsampling"
