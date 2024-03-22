@@ -1,3 +1,7 @@
+.virtual_documents
+*/ala_mstis_bootstrap.nc
+*/ala_mstis_production.nc
+
 docs/papers
 code/esp32/build
 code/build

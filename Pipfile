@@ -10,14 +10,12 @@ mdanalysis = "*"
 jupyter = "*"
 nglview = "*"
 pandas = "*"
-jupyter-contrib-nbextensions = "*"
 sqlalchemy = "*"
-openpathsampling = "*"
 
 [dev-packages]
 
 [requires]
-python_version = "3.9"
+python_version = "3.10"
 
 [scripts]
-hooks = "conda install -c conda-forge openmm mdtraj openpathsampling"
+hooks = "conda install -y -c conda-forge openmm mdtraj openpathsampling openmmtools pymbar"
